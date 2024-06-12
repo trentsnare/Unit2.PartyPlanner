@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: orange;
+    margin: unset;
+    padding: unset;
+}
+
+#PartyList {
+    display: grid;
+    grid-template-areas: ". . . . .";
+    justify-items: center;
+}
+
+#PartyList>* {
+    padding: 1vw;
+    text-align: center;
+    box-shadow: 2px 2px 4px;
+    background: #eee;
+    position: relative;
+    height: 30vh;
+    width: 20vw;
+}
+
+#PartyList page {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+}
+
+
+#PartyList guestPage {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    top: 0;
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+    background: white;
+    z-index: -1;
+    font-size: 10pt;
+    text-align: left;
+}
+
+#PartyList partyrsvp:hover{
+    color:red;
+    cursor: pointer;
+}
+
+#PartyList .showAttendees guestPage {
+    z-index: 1;
+}
+
+#PartyList .showAttendees partyrsvp {
+    z-index: 2;
+}
+
+
+#PartyList>*:hover {
+    cursor: default;
+}
+
+#PartyList partyTitle {
+    display: block;
+    font-weight: bold;
+    font-size: 16pt;
+    text-decoration: underline;
+}
+
+#PartyList partyLocation {
+    display: block;
+    font-weight: bold;
+    font-size: 12pt;
+}
+
+
+#PartyList partyDesc {
+    display: block;
+    font-style: italic;
+    padding: 6px;
+}
+
+#PartyList partyDate {
+    display: block;
+}
+
+#PartyList deleteParty {
+    display: block;
+    position: absolute;
+    color: red;
+    top: 6px;
+    right: 6px;
+    padding: 2px;
+    box-shadow: 0 0 2px red inset;
+    border-radius: 25px;
+    width: 3ch;
+    height: 3ch;
+}
+
+#PartyList deleteParty:hover {
+    color: white;
+    cursor: pointer;
+    background: red;
+}
+
+#PartyList> :last-child {
+    background: unset;
+    box-shadow: unset;
+}
+
+#PartyList .form> :first-child {
+    font-weight: bold;
+    font-size: 1.4em;
+    text-decoration: underline;
+}
+
+#PartyList .form {
+    padding: 8px;
+    box-shadow: 4px 4px 8px black;
+    border: 1px solid black;
+    background-color: lightblue;
+    border-radius: 25px;
+    display: flex;
+    height: 100%;
+    align-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#PartyList .form input,
+#PartyList .form textarea {
+    width: 100%;
+    text-align: center;
+    background: rgba(255, 255, 255, .7);
+    border: 1px groove #ccc
+}
